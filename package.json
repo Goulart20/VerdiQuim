@@ -1,0 +1,12 @@
+{
+  "name": "verdiquin-pwa",
+  "version": "1.0.0",
+  "description": "PWA simples com botão de instalação e ping funcional",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

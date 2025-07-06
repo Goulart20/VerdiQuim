@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Compre mudas de salsinha da VerdiQuin. Cultive saúde, sustentabilidade e sabor diretamente do seu quintal." />
+  <title>VerdiQuin | Mudas de Salsinha</title>
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --verde-principal: #4caf50;
+      --verde-escuro: #2e7d32;
+      --marrom: #a1887f;
+      --bege: #f5f5dc;
+      --cinza-claro: #f0f0f0;
+      --branco: #ffffff;
+      --sombra-suave: rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--cinza-claro);
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-topo {
+      background: linear-gradient(145deg, var(--verde-principal), var(--verde-escuro));
+      color: var(--branco);
+      text-align: center;
+      padding: 60px 20px 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 4px 18px var(--sombra-suave);
+      z-index: 1000;
+      animation: fadeInTop 1s ease-out both;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    .hero-logo {
+      width: 140px;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .hero-titulo {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin: 0;
+      letter-spacing: 1.5px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    .hero-slogan {
+      font-size: 1.4rem;
+      font-style: italic;
+      font-weight: 400;
+      margin-top: 10px;
+      opacity: 0.95;
+    }
+
+    @keyframes fadeInTop {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    section {
+      padding: 55px 25px;
+      max-width: 1100px;
+      margin: 30px auto;
+      background-color: var(--branco);
+      border-radius: 14px;
+      box-shadow: 0 6px 18px var(--sombra-suave);
+      transition: box-shadow 0.3s ease;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+      animation-delay: 0.3s;
+    }
+
+    section:hover {
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      color: var(--verde-escuro);
+      margin-bottom: 28px;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-align: center;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+
+    p, li {
+      margin-bottom: 18px;
+      font-size: 1.125rem;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+
+    ul {
+      padding-left: 26px;
+      list-style-type: disc;
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    ul li {
+      margin-bottom: 14px;
+      line-height: 1.6;
+    }
+
+    .card {
+      background-color: var(--bege);
+      padding: 25px 30px;
+      border-radius: 14px;
+      margin-bottom: 25px;
+      box-shadow: inset 0 0 8px #c6bca3;
+      font-weight: 500;
+      font-size: 1.125rem;
+      color: #4b4b4b;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      transition: background-color 0.3s ease;
+    }
+
+    .card:hover {
+      background-color: #efe9d6;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .galeria img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px var(--sombra-suave);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      cursor: pointer;
+      object-fit: cover;
+      height: 160px;
+    }
+
+    .galeria img:hover,
+    .galeria img:focus {
+      transform: scale(1.07);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+      outline: none;
+      border: 2px solid var(--verde-principal);
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 900px;
+      margin: 30px auto 0;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px var(--sombra-suave);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 14px;
+    }
+
+    form {
+      max-width: 650px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--verde-escuro);
+    }
+
+    input,
+    textarea {
+      padding: 14px 16px;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+      transition: border-color 0.3s ease;
+      resize: vertical;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #999;
+      font-style: italic;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--verde-principal);
+      outline: none;
+      box-shadow: 0 0 5px var(--verde-principal);
+    }
+
+    button {
+      background-color: var(--verde-principal);
+      color: var(--branco);
+      border: none;
+      padding: 16px 0;
+      font-weight: 700;
+      font-size: 1.15rem;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(76, 175, 80, 0.5);
+      transition: all 0.3s ease;
+      letter-spacing: 0.8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    button:hover,
+    button:focus {
+      background-color: var(--verde-escuro);
+      box-shadow: 0 8px 20px rgba(46, 125, 50, 0.7);
+      outline: none;
+      transform: scale(1.02);
+    }
+
+    #mensagem-pedido {
+      margin-top: 18px;
+      color: #2e7d32;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-align: center;
+      min-height: 28px;
+      font-style: italic;
+      user-select: none;
+      transition: opacity 0.4s ease;
+    }
+
+    .faq {
+      background-color: #f1fdf3;
+      padding: 28px 30px;
+      border-radius: 14px;
+      max-width: 900px;
+      margin: 0 auto;
+      box-shadow: inset 0 0 12px #d9e9d4;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #3c4a31;
+    }
+
+    .faq p {
+      margin-bottom: 16px;
+    }
+
+    footer {
+      background-color: var(--marrom);
+      text-align: center;
+      padding: 32px 20px;
+      font-size: 1rem;
+      color: var(--branco);
+      margin-top: auto;
+      box-shadow: 0 -4px 10px var(--sombra-suave);
+      user-select: none;
+    }
+
+    footer p {
+      margin-bottom: 8px;
+      font-weight: 500;
+      letter-spacing: 0.4px;
+    }
+
+    footer strong {
+      font-weight: 700;
+      color: var(--verde-principal);
+    }
+
+    @media (max-width: 720px) {
+      .hero-titulo {
+        font-size: 2.4rem;
+      }
+
+      .hero-slogan {
+        font-size: 1rem;
+      }
+
+      section {
+        margin: 25px 15px;
+        padding: 40px 15px;
+      }
+
+      .galeria {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 16px;
+      }
+
+      .galeria img {
+        height: 140px;
+      }
+
+      form {
+        max-width: 100%;
+        padding: 0 10px;
+      }
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="hero-topo">
+      <img src="assets/logo.png" alt="Logo VerdiQuin" class="hero-logo" />
+      <h1 class="hero-titulo">VerdiQuin</h1>
+      <p class="hero-slogan">Cultive sabor, colha saúde.</p>
+    </div>
+  </header>
+
+  <section id="sobre" tabindex="0" aria-label="Quem somos">
+    <h2>🌱 Quem Somos</h2>
+    <p>A VerdiQuin nasceu da paixão por plantar e pela vontade de levar mais saúde à mesa das pessoas. Com técnicas sustentáveis e respeito à terra, cultivamos mudas de salsinha com amor e conhecimento.</p>
+  </section>
+
+  <section id="plantio" tabindex="0" aria-label="Como plantamos">
+    <h2>🪴 Como Plantamos</h2>
+    <div class="card">
+      <p>Utilizamos adubo orgânico feito de compostagem natural, respeitando os ciclos da natureza.</p>
+      <p>Nossas mudas crescem sob luz solar indireta, ventilação cruzada e são regadas cuidadosamente para garantir qualidade e vitalidade.</p>
+    </div>
+  </section>
+
+  <section id="beneficios" tabindex="0" aria-label="Benefícios da salsinha">
+    <h2>🌿 Benefícios da Salsinha</h2>
+    <ul>
+      <li>Rica em vitaminas A, C e K</li>
+      <li>Auxilia na digestão</li>
+      <li>Tem propriedades anti-inflamatórias</li>
+      <li>Melhora o hálito naturalmente</li>
+      <li>Ajuda na eliminação de toxinas do corpo</li>
+    </ul>
+  </section>
+
+  <section id="galeria" tabindex="0" aria-label="Galeria de imagens de salsinha">
+    <h2>📸 Galeria</h2>
+    <div class="galeria">
+      <img src="foto.png" alt="Muda de salsinha saudável" />
+      <img src="foto1.png" alt="Salsinha em vaso de barro" />
+      <img src="foto2.png" alt="Plantação caseira de salsinha" />
+    </div>
+  </section>
+
+  <section tabindex="0" aria-label="Vídeo de plantio">
+    <h2>🎥 Assista: Como plantar salsinha em casa</h2>
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/ScIqHYqGlCI" 
+        title="Vídeo de como plantar salsinha em casa" 
+        frameborder="0" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <section class="faq" tabindex="0" aria-label="Perguntas frequentes">
+    <h2>❓ Dúvidas Frequentes</h2>
+    <p><strong>Como devo regar a salsinha?</strong><br>Regue quando a terra estiver seca ao toque. Não encharque!</p>
+    <p><strong>Quanto tempo leva para crescer?</strong><br>Em 30 a 60 dias você pode começar a colher!</p>
+    <p><strong>Posso plantar em vaso?</strong><br>Sim, vasos com boa drenagem são ideais!</p>
+  </section>
+
+  <section id="comprar" tabindex="0" aria-label="Formulário de compra de mudas">
+    <h2>🛒 Comprar Mudas</h2>
+    <form id="form-compra" novalidate>
+      <label for="nome">Nome completo:</label>
+      <input type="text" id="nome" name="nome" required autocomplete="name" placeholder="Seu nome completo" />
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required autocomplete="email" placeholder="seu@email.com" />
+
+      <label for="quantidade">Quantidade de mudas:</label>
+      <input type="number" id="quantidade" name="quantidade" min="1" required placeholder="1" />
+
+      <label for="endereco">Endereço de entrega:</label>
+      <textarea id="endereco" name="endereco" rows="3" required placeholder="Rua, número, bairro, cidade..."></textarea>
+
+      <button type="submit"><i class="fas fa-shopping-cart"></i> Finalizar Pedido</button>
+    </form>
+    <div id="mensagem-pedido" aria-live="polite"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 VerdiQuin - Todos os direitos reservados.</p>
+    <p>
+      Siga no Instagram 
+      <a href="https://www.instagram.com/verdequim?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+        <strong>@verdiquin</strong> 🌿
+      </a>
+    </p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('form-compra');
+    const mensagemPedido = document.getElementById('mensagem-pedido');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      if (!form.checkValidity()) {
+        mensagemPedido.style.color = 'red';
+        mensagemPedido.textContent = '❗ Por favor, preencha todos os campos corretamente.';
+        return;
+      }
+
+      mensagemPedido.style.color = '#2e7d32';
+      mensagemPedido.textContent = '🌱 Pedido recebido! Entraremos em contato por e-mail.';
+      form.reset();
+    });
+  </script>
+</body>
+</html>
+
